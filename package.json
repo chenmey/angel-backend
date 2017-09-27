@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chenmey/angel-backend/issues"
   },
-  "homepage": "https://github.com/chenmey/angel-backend#readme"
+  "homepage": "https://github.com/chenmey/angel-backend#readme",
+  "dependencies": {
+    "express": "^4.15.5"
+  }
 }
