@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 
 var userRoutes = require('./routes/users')
+var professionalRoutes = require('./routes/professionals')
 
 
 mongoose.Promise = global.Promise;
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://chen:samsung1@ds153003.mlab.com:53003/angel', { useM
 
 
 app.use('/users', userRoutes);
+app.use('/professionals', professionalRoutes);
 
 app.listen(process.env.PORT || 8080, () => console.log('all ok'))
 

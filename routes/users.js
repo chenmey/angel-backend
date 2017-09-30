@@ -4,7 +4,7 @@ var express = require('express');
 var User = require('../models/user');
 var router = express.Router();
 
-router.get('/get_all_users', function(req, res) {    
+router.get('/get_all', function(req, res) {    
     User.find({}, function(err, users) {
       if (err) throw err;
       res.send(users);
