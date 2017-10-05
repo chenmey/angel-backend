@@ -13,6 +13,14 @@ router.get('/get_all', function(req, res) {
     
 });
 
+router.get('/get_professional_by_phone/:phone', function(req, res) {    
+    Professional.findOne({phone:req.params.phone}).populate('reviews.user').exec(function(err, professional) {
+      if (err) throw err;
+      res.send(professional);
+    });
+    
+});
+
 router.post('/add_review', function(req, res) {
     Professional.findOne({phone: req.body.phone}, function(err, professional) {
         if (err) throw err;
